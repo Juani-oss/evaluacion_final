@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+{{ libro.title }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid text-center">
+    <h1>{{libro.Title}}</h1>
+    <div class="row justify-content-evenly">
+        <div class="col-4">
+            <img src="{{ libro.image }}" alt="{{ libro.title }}" class="img-fluid"/>
+        </div>
+        <div class="col-4">
+            <h3>{{ libro.price }}</h3>
+            <p>{{ libro.description }}</p>
+            <a href="{% url 'libro_list' %}" class="btn btn-primary" role="button">Volver a la Lista</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

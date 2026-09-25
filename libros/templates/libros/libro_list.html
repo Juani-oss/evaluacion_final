@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="container-fluid text-center">
-    <h1>Lista de Libros</h1>
+    <h1>Libreria</h1>
     <a href="{% url 'libro_create' %}" class="btn btn-primary m-3" >Crear Libro</a>
     <div class="d-flex flex-wrap justify-content-center gap-5">
         {% for libro in libros %}

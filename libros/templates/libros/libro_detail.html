@@ -8,15 +8,15 @@
 
 {% block content %}
 
-<div class="container-fluid text-center">
-    <h1>{{libro.Title}}</h1>
-    <div class="row justify-content-evenly">
-        <div class="col-4">
-            <img src="{{ libro.image }}" alt="{{ libro.title }}" class="img-fluid"/>
+<div class="container my-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-4 text-center mb-4">
+            <img src="{{ libro.image }}" alt="{{ libro.title }}" class="img-fluid rounded shadow" style="max-height: 450px;"/>
         </div>
-        <div class="col-4">
-            <h3>{{ libro.price }}</h3>
-            <p>{{ libro.description }}</p>
+        <div class="col-md-5 text-start">
+            <h1 class="mb-3">{{ libro.title }}</h1>
+            <p class="text-muted">{{ libro.description }}</p>
+            <h3 class="mb-4">$ {{ libro.price }}</h3>
             <a href="{% url 'libro_list' %}" class="btn btn-primary" role="button">Volver a la Lista</a>
         </div>
     </div>
